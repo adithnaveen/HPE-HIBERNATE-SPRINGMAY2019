@@ -14,8 +14,29 @@
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+		
+		
 		
 		<mapping class="training.hpe.entity.Person"/>
+		
+		
+		<!-- 
+		
+		<mapping class="training.hpe.entity.Product"/>
+		<mapping class="training.hpe.entity.Television"/>
+		<mapping class="training.hpe.entity.CellPhone"/> 
+
+		<mapping class="training.hpe.entity.College"/>
+		<mapping class="training.hpe.entity.Customer"/>
+		<mapping class="training.hpe.entity.EmployeeEntity"/>
+		<mapping class="training.hpe.entity.AccountEntity"/>
+		-->
+		
+		<mapping class="training.hpe.entity.Human"/>
+		<mapping class="training.hpe.entity.Language"/>
+		
+		
 		
 </session-factory>
 </hibernate-configuration>

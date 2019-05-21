@@ -12,6 +12,7 @@ public class HibernateUtil {
 	// static -> singleton
 	private static SessionFactory sessionFactory;
 
+	// first level caching hibernate name does it 
 	public static SessionFactory getSessionFactory() {
 		if (sessionFactory == null) {
 			// have an empty configuration object
