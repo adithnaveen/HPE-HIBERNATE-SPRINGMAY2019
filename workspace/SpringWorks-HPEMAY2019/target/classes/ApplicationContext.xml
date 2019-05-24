@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+<!--  we can give property information with spring configuration class, and 
+	giving the property file name  
+		PropertyPlaceHoldConfgurer
+	-->
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>helloinfo.properties</value>
+		</property>
+	</bean>
+
+	<bean id="hello" class="training.spring.DefaultService"
+		scope="singleton" init-method="init" destroy-method="destroy">
+		<property name="name" value="${hpe.name}" />
+		<property name="city" value="${hpe.city}" />
+	</bean>
+
+	<bean class="training.spring.postprocessor.EmployeePostProcess"/>
+	<bean class="training.spring.postprocessor.NewPostProcessor"/>
+ </beans>
