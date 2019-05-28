@@ -1,0 +1,118 @@
+class Employee{
+	private int empId; 
+	private String empName; 
+	private double empSal; 
+}
+
+public void insertEmployee(Employee emp){
+	String sql ="insert into employee values(
+			?,?,?);";
+
+	connection.ps = .... 
+	ps.setInt(emp.getEmpId()); 
+	ps.setString(emp.getEmpName()); 
+	ps.setDouble(emp.getEmpSal()); 
+	
+	ps.executeUpdate(); 
+}
+public void insertEmployee(Employee emp){
+	call hibernate 
+	hibernate.save(emp); 
+}
+
+hibernate.cfg.xml 
+- configuration 
+
+
+static SessionFactory factory = hibernate.cfg.xml 
+
+public boolean insertEmployee(Employee e){
+	Session session = factory.openSession(); 
+	
+	// e -> transient 
+	session.save(e); -> persistence 
+	session.save(e1); -> persistence 
+	session.save(e2); -> persistence 
+	
+	session.getTransaction().commit(); 
+}
+
+
+https://bit.ly/2LXZ6p0
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.11</version>
+</dependency>
+
+<dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>5.1.6</version>
+</dependency>
+
+
+naveenks.com/m/message
+
+set auto commit off; 
+
+insert into emp values(101, "Harry"); 
+
+
+commit; 
+
+
+whole object 
+HQL 
+
+
+https://github.com/adithnaveen/HPE-HIBERNATE-SPRINGMAY2019.git
+
+
+@Getter
+@Setter 
+@AllArgConstructor
+@ToString
+class Employee{
+	private int empId; 
+	private String empName; 
+	private String email; 
+	private double income; 
+	
+}
+<dependency>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
+	<version>1.18.6</version>
+	<scope>provided</scope>
+</dependency>
+
+create table account(id, balance, 
+	employeeid int, 
+	foreign key(employeeid) references Employee(empid) on update cascade ); 
+
+create table Employee(
+	empid int primary key, 
+	empanme varchar(20) null null, 
+	accountid int,
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

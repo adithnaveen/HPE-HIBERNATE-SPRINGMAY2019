@@ -1,0 +1,154 @@
+http://naveenks.com/m/message
+
+
+
+class ViewBalance extends HttpServlet{
+	doGet(req, res){}
+}
+class transferBalance extends HttpServlet{
+	doGet(req, res){}
+}
+class revkeBalance extends HttpServlet{
+	doGet(req, res){}
+}
+class deleteUser extends HttpServlet{
+	doGet(req, res){}
+}
+
+
+
+
+
+<servlet>
+	<servlet-class>x.x.x.DispatcherServlet</servlet-class>
+	<servlet-name>somename</servlet-name>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>somename</servlet-name>
+	<url-pattern>/*</url-pattern>
+</servlet-mapping>
+
+
+
+To Set up the project 
+1. Create a dynamic project 
+2. Convert to Maven project 
+3. copy pom contents 
+4. got file called web.xml in WEB-INF 
+5. Copy and paste  (
+<servlet>
+		<servlet-name>mycompany</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>mycompany</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	6. Create a file called in WEB-INF 
+	<servlet-name>-servlet.xml 
+	ex: mycompany-servlet.xml 
+	
+7. Pass the contnetn to locate the source
+files and to dispatch the view 
+
+<context:component-scan base-package="training.controller" />
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<mvc:annotation-driven/>
+	
+	<mvc:interceptors>
+		<bean class="com.naveen.interceptors.HelloWorldInterceptor"/>
+	</mvc:interceptors>
+</beans>
+	`
+
+8. Create a package called training.controller 
+
+
+http://localhost:8080//SpringMVC-HPE2019/hello.html
+
+
+
+
+
+
+
+
+http://localhost:8080/somproject/hpe/something 
+<servlet>
+		<servlet-name>hpe</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>hpe</servlet-name>
+		<url-pattern>/hpe/*</url-pattern>
+	</servlet-mapping>
+
+
+	
+
+
+<h1></h1> 
+
+<form:h1></form:h1>
+
+
+
+
+
+
+
+
+
+
+
+{
+	"userName": "Sachin",
+    "userAge": 38,
+    "userEmail": "sachin@hpe.com"
+}
+
+
+
+
+
+
+
+http://localhost:8080/someapplication/add 
+http://localhost:8080/someapplication/delete 
+http://localhost:8080/someapplication/update 
+http://localhost:8080/someapplication/select
+http://localhost:8080/someapplication/selectall 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
